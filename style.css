@@ -1,0 +1,276 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: "Roboto", sans-serif !important;
+}
+
+.font-montserrat{
+    font-family: "Montserrat", sans-serif !important;
+}
+
+.style-italic{
+    font-style: italic;
+}
+
+header{
+    background: url('images/bg-laptop.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    padding: 40px 20px;
+}
+
+header img{
+    border-radius: 50%;
+    border: 5px solid #fff;
+    margin-right: 20px;
+}
+
+.name{
+    white-space: nowrap;
+    animation: control-width 2s ease-in-out forwards;
+}
+
+.title{
+    white-space: nowrap;
+    animation: control-width 2s ease-in-out 2s forwards;
+    padding-bottom: 15px;
+}
+
+@keyframes control-width {
+    0%{
+        width: 0;
+    }   
+    100%{
+        width: 100%;
+    }
+}
+
+
+nav{
+    border-top: 4px solid #fff;
+    border-bottom: 2px solid #fff;
+    padding: 10px 0;
+}
+
+nav ul li{
+    margin: 0 20px;
+    font-weight: 500;
+    font-size: 20px;
+    cursor: pointer;
+    transition: .3s ease-in-out;
+    opacity: 0;
+    animation: op 1s ease-in-out 3.5s forwards;
+}
+
+@keyframes op {
+    0%{
+        opacity: 0;
+    }
+
+    100%{
+        opacity: 1;
+    }
+}
+
+nav li:hover{
+    color: #1677A4;
+}
+
+#about img{
+    opacity: 0;
+    transition: 2s ease-in-out;
+}
+
+#about img.visible{
+    opacity: 1;
+}
+
+.about-description{
+    transition: 2s ease-in-out;
+    transform: translateX(150%);
+}
+
+.about-description.visible{
+    transform: translateX(0);
+}
+
+.features{
+    gap: 40px;
+    background-color: #1677A4;
+    overflow: hidden;
+}
+
+.features h3{
+    font-size: 22px;
+    color: #fff;
+    font-weight: 600;
+    font-family: "Montserrat", sans-serif;
+}
+
+.features .feature{
+    cursor: pointer;
+    transition: .8s ease-in-out;
+    transform: translateY(100%);
+    opacity: 0;
+}
+
+.feature:nth-child(2){
+    transition-delay: .8s;
+}
+
+.feature:nth-child(3){
+    transition-delay: 1.6s;
+}
+
+.features.visible .feature{
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.features .feature:hover{
+    scale: 1.1;
+}
+
+.questions{
+    gap: 40px;
+    padding: 100px;
+}
+
+.questions li{
+    background-color: #eee;
+    padding: 20px;
+    border-radius: 20px;
+    opacity: 0;
+    transition: .8s ease-in-out;
+}
+
+.questions li:nth-child(2){
+    transition-delay: .8s;
+}
+
+.questions li:nth-child(3){
+    transition-delay: 1.6s;
+}
+
+.questions li:nth-child(4){
+    transition-delay: 2.4s;
+}
+
+.questions.visible li{
+    opacity: 1;
+}
+
+#quote{
+    background: url('images/bg-cafe.png') ;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.btn{
+    background-color: #1677A4;
+    padding: 15px 30px;
+    border-radius: 20px;
+    font-size: 20px;
+    color: #fff;
+    font-weight: 500;
+    transition: .2s ease-in-out;
+    height: 62px;
+}
+
+.btn:hover{
+    color: #1677A4;
+    background-color: #fff;
+    border: 1px solid #1677A4;
+}
+
+
+.project{
+    width: 300px;
+    box-shadow: 0 10px 5px 0 #1677A4;
+    border-radius: 20px;
+}
+
+.project img{
+    max-width: 100%;
+    border-radius: 20px 20px 0 0;
+}
+
+.project-description{
+    padding: 30px;
+}
+
+.feature{
+    padding: 20px;
+}
+
+#contact{
+    background: url('images/communication.png');
+    background-repeat: no-repeat ;
+    background-size: cover;
+    background-attachment:fixed;
+}
+
+input[type="submit"]{
+    transition: .2s ease-in-out;
+    height: 42PX;
+}
+
+input[type="submit"]:hover{
+    color: #1677A4;
+    background-color: #fff;
+    border: 1px solid #1677A4;
+}
+
+.border{
+    border: 1px solid #ccc;
+}
+
+.pt-16{
+    padding-top: 8rem;
+}
+
+.contact-info svg{
+    width: 25px;
+    height: 25px;
+}
+
+.line-break{
+    line-break: anywhere;
+}
+
+@media (max-width:760px) {
+    header > div{
+        flex-direction: column;
+    }
+
+    header img{
+        margin-bottom: 40px;
+    }
+
+    .questions{
+        padding: 100px 50px;
+    }
+}
+
+@media (max-width:550px) {
+    header img{
+        width: 100px;
+        height: 100px;
+    }
+
+    header li{
+        font-size: 16px !important;
+        margin: 0 10px !important;
+    }
+
+    header .info{
+        font-size: 32px;
+    }   
+}
